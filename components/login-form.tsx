@@ -1,11 +1,11 @@
 "use client";
 
 import { getFormProps, getInputProps, useForm } from "@conform-to/react";
-import { parseWithZod } from "@conform-to/zod";
+import { parseWithZod } from "@conform-to/zod/v4";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ComponentPropsWithoutRef, useState } from "react";
-import { z } from "zod";
+import { z } from "zod/v4";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -94,4 +94,6 @@ export function LoginForm({ className, ...props }: ComponentPropsWithoutRef<"div
     </div>
   );
 }
+
+
 

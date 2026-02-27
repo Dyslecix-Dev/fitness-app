@@ -1,6 +1,6 @@
 import { withSerwist } from "@serwist/turbopack";
 import type { NextConfig } from "next";
-import { z } from "zod";
+import { z } from "zod/v4";
 
 (() => {
   const envSchema = z.object({
@@ -48,3 +48,4 @@ const nextConfig: NextConfig = {
 };
 
 export default withSerwist(nextConfig);
+

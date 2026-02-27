@@ -1,7 +1,7 @@
 "use client";
 
 import { getFormProps, getInputProps, useForm } from "@conform-to/react";
-import { parseWithZod } from "@conform-to/zod";
+import { parseWithZod } from "@conform-to/zod/v4";
 import { compareAsc, format } from "date-fns";
 import { InfoIcon } from "lucide-react";
 import * as motion from "motion/react-client";
@@ -136,3 +136,4 @@ export function ProtectedPageContent({ userDetails }: { userDetails: ReactNode }
     </div>
   );
 }
+

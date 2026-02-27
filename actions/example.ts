@@ -1,7 +1,7 @@
 // TODO: Replace example file
 "use server";
 
-import { z } from "zod";
+import { z } from "zod/v4";
 
 import { actionClient } from "@/lib/safe-action";
 
