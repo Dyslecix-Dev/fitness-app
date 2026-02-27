@@ -5,13 +5,15 @@ import { UserDetails } from "@/app/(protected)/_components/user-details";
 
 export default function ProtectedPage() {
   return (
-    <ProtectedPageContent
-      userDetails={
-        <Suspense>
-          <UserDetails />
-        </Suspense>
-      }
-    />
+    <Suspense>
+      <ProtectedPageContent
+        userDetails={
+          <Suspense>
+            <UserDetails />
+          </Suspense>
+        }
+      />
+    </Suspense>
   );
 }
 
