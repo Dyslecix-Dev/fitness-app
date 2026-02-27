@@ -62,6 +62,7 @@ const geistSans = Geist({
 });
 
 import { CounterStoreProvider } from "@/providers/counter-store-provider";
+import { SerwistProvider } from "./serwist";
 
 export default function RootLayout({
   children,
@@ -73,7 +74,9 @@ export default function RootLayout({
       <body className={`${geistSans.className} antialiased`}>
         <NuqsAdapter>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-            <CounterStoreProvider>{children}</CounterStoreProvider>
+            <SerwistProvider swUrl="/serwist/sw.js" cacheOnNavigation reloadOnOnline={false} disable={process.env.NODE_ENV === "development"}>
+              <CounterStoreProvider>{children}</CounterStoreProvider>
+            </SerwistProvider>
           </ThemeProvider>
         </NuqsAdapter>
         <Toaster />
